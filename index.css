@@ -180,7 +180,7 @@ main{
 }
 
 
-input[type="text"]{
+#email{
     padding: 0 calc(32em/14);
     height: calc(44rem/16);
     width: 100%;
@@ -245,7 +245,7 @@ form button:hover, form button:active{
         top:0;
     }
 
-    input[type="text"]{
+    #email{
         padding: 0 12.5rem 0 1.5rem;
         height: calc(44rem/16);
     }

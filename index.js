@@ -2,7 +2,6 @@ const formBtn = document.getElementById("btn")
 const form = document.getElementById("email-form")
 const inputEmail = document.getElementById("email")
 const errorMessage = document.getElementById("error-message")
-const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 let isFormInputCorrect = true
 
 form.addEventListener("submit", e => {
@@ -11,16 +10,6 @@ form.addEventListener("submit", e => {
     if(inputEmail.value===""){
         isFormInputCorrect = false
         errorMessage.textContent = "Oops! Please add your email"
-        if(window.innerWidth <= 767) {
-            inputEmail.style.border = "2px solid var(--red)"
-        }
-        else{
-            form.style.border = "2px solid var(--red)"
-        }
-    }
-    else if(!regex.test(inputEmail.value)){
-        isFormInputCorrect = false
-        errorMessage.textContent = "Oops! Please check your email"
         if(window.innerWidth <= 767) {
             inputEmail.style.border = "2px solid var(--red)"
         }
@@ -42,6 +31,20 @@ form.addEventListener("submit", e => {
     form.reset()
 
 })
+
+inputEmail.addEventListener("invalid", ()=>{
+    
+    isFormInputCorrect = false
+    errorMessage.textContent = "Oops! Please check your email"
+    if(window.innerWidth <= 767) {
+        inputEmail.style.border = "2px solid var(--red)"
+    }
+    else{
+        form.style.border = "2px solid var(--red)"
+    }
+})
+
+inputEmail.addEventListener("val")
 
 function resizeWindow(){
     if(!isFormInputCorrect){
