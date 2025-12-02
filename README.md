@@ -47,7 +47,7 @@ Users should be able to:
 
 I learned how to organize my HTML properly and change the order of HTML elements depending on the screen size using Flexbox.
 Also I learned how to apply different styles to form elements when the screen resizes. Furthermore I studied
-how to check the validity of email inputs using a regular expression.
+the eventListener type invalid.
 
 ```js
 function resizeWindow(){
