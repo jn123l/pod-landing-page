@@ -7,7 +7,7 @@ let isFormInputCorrect = true
 form.addEventListener("submit", e => {
     e.preventDefault()
 
-    
+    if(inputEmail.checkValidity()){
     isFormInputCorrect = true
     errorMessage.textContent = ""
         if(window.innerWidth <= 767) {
@@ -34,14 +34,14 @@ inputEmail.addEventListener("invalid", ()=>{
         }
     }
     else{
-    isFormInputCorrect = false
-    errorMessage.textContent = "Oops! Please check your email"
-    if(window.innerWidth <= 767) {
-        inputEmail.style.border = "2px solid var(--red)"
-    }
-    else{
-        form.style.border = "2px solid var(--red)"
-    }
+      isFormInputCorrect = false
+      errorMessage.textContent = "Oops! Please check your email"
+      if(window.innerWidth <= 767) {
+          inputEmail.style.border = "2px solid var(--red)"
+      }
+      else{
+          form.style.border = "2px solid var(--red)"
+      }
     }
 })
 
