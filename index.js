@@ -7,19 +7,9 @@ let isFormInputCorrect = true
 form.addEventListener("submit", e => {
     e.preventDefault()
 
-    if(inputEmail.value===""){
-        isFormInputCorrect = false
-        errorMessage.textContent = "Oops! Please add your email"
-        if(window.innerWidth <= 767) {
-            inputEmail.style.border = "2px solid var(--red)"
-        }
-        else{
-            form.style.border = "2px solid var(--red)"
-        }
-    }
-    else{
-        isFormInputCorrect = true
-        errorMessage.textContent = ""
+    
+    isFormInputCorrect = true
+    errorMessage.textContent = ""
         if(window.innerWidth <= 767) {
             inputEmail.style.border = "none"
         }
@@ -33,7 +23,17 @@ form.addEventListener("submit", e => {
 })
 
 inputEmail.addEventListener("invalid", ()=>{
-    
+    if(inputEmail.value===""){
+        isFormInputCorrect = false
+        errorMessage.textContent = "Oops! Please add your email"
+        if(window.innerWidth <= 767) {
+            inputEmail.style.border = "2px solid var(--red)"
+        }
+        else{
+            form.style.border = "2px solid var(--red)"
+        }
+    }
+    else{
     isFormInputCorrect = false
     errorMessage.textContent = "Oops! Please check your email"
     if(window.innerWidth <= 767) {
@@ -41,6 +41,7 @@ inputEmail.addEventListener("invalid", ()=>{
     }
     else{
         form.style.border = "2px solid var(--red)"
+    }
     }
 })
 
