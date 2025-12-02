@@ -337,7 +337,7 @@ form button:hover, form button:active{
     .dots{
         position: absolute;
         top: calc(755em/16);
-        right: 0;
+        right: -0.666em;
         display: inline-block;
         width: calc(233em/16);
     }
