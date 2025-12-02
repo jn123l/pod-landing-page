@@ -31,7 +31,6 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/jn123l/pod-landing-page/)
 - Live Site URL: [Netlify](https://pod-landing-page.netlify.app/)
 
 ## My process
