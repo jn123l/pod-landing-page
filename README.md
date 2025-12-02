@@ -44,8 +44,6 @@ Users should be able to:
 - Mobile-first workflow
 - Vanilla JS
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 I learned how to organize my HTML properly and change the order of HTML elements depending on the screen size using Flexbox.
